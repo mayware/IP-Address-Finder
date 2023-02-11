@@ -58,7 +58,7 @@ body {
 
 ::placeholder {
     color: #dee2e6;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     opacity: 1;
 }
@@ -105,24 +105,19 @@ body {
 
 .tracker-panel {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
     row-gap: 5px;
     border-radius: 5px;
     margin-right: .5rem;
     height: 100%;
 }
 
-.current-address,
-.current-town,
-.current-coordinates,
-.current-zone,
-.current-isp {
+.current-info {
     display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
     flex-direction: column;
     font-family: 'Courier New', Courier, monospace;
-    padding: .5rem;
     border: 1px solid #343434;
     border-radius: 5px;
     width: 100%;
@@ -157,13 +152,83 @@ body {
 
 .map {
     height: 100%;
+    width: 100%;
     background: #191919;
     border: 1px solid #343434;
     border-radius: 5px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 960px) {
+    .header {
+        height: 60px;
+        padding: 0 1rem;
+    }
+
+    .header-title-link {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
     .search-field {
+        font-size: 12;
+        height: 30px;
         width: 150px;
+    }
+
+    ::placeholder {
+        color: #dee2e6;
+        font-size: 12px;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    .search-btn {
+        height: 30px;
+        width: 50px;
+        font-size: 10;
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 200,
+            'GRAD' 0,
+            'opsz' 24
+    }
+
+    .ip-tracker {
+        row-gap: 10px;
+    }
+
+    .tracker-panel {
+        grid-column: 1/5;
+        grid-template-rows: repeat(5, auto);
+        margin-right: 0;
+        row-gap: 0;
+    }
+
+    .tracker-map {
+        border: 1px solid #343434;
+        background: #212529;
+        border-radius: 5px;
+        height: 100%;
+        width: 100%;
+        grid-row: 2/ 5;
+        grid-column: 1/5;
+    }
+
+    .section-title {
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: .5rem;
+    }
+
+    .address-value,
+    .town-value,
+    .zone-value,
+    .isp-value,
+    .coor-value {
+        font-size: 16px;
+        font-weight: 500;
     }
 }

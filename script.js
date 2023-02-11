@@ -12,10 +12,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(myMap);
 
-// L.marker([51.5, -0.09]).addTo(map)
-//     .bindPopup('Target location')
-//     .openPopup();
-
 function getIP(e) {
     e.preventDefault();
     if (input.value != '' && input.value != null) {
@@ -28,7 +24,7 @@ function getIP(e) {
 
 function trackData(info) {
     address.innerHTML = info.ip;
-    town.innerHTML = `${info.location.city}, ${info.location.country}`;
+    town.innerHTML = `${info.location.city},${info.location.country}`;
     coordinates.innerHTML = `Lat ${info.location.lat} <br> Lng ${info.location.lng}`
     zone.innerHTML = `UTC ${info.location.timezone}`;
     isp.innerHTML = info.isp;
