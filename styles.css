@@ -36,6 +36,33 @@ body {
     transition: 200ms ease-in-out;
 }
 
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.my-ip-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    padding: .5rem;
+    margin-right: .5rem;
+    font-size: 14px;
+    font-weight: 700;
+    background: #ffd60a;
+    color: #101010;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+
+.my-ip-btn:hover {
+    background: #ef233c;
+    color: #dee2e6;
+    transition: 200ms ease-in-out;
+}
+
 .search-form {
     display: flex;
     align-items: center;
